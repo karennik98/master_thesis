@@ -1,0 +1,7 @@
+test/api_examples/.idea
+test/api_examples/basic_ocr/.idea
+test/api_examples/basic_ocr/cmake-build-debug/
+test/api_examples/get_component_images/cmake-build-debug/
+doc_to_image/.idea/
+doc_to_image/test.jpg
+doc_to_image/venv/
