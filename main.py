@@ -2,8 +2,8 @@ import cv2 as cv
 import os
 import numpy
 from PIL import ImageFont, ImageDraw, Image
+import argparse
 
-out_folder_path = 'output_png/'
 font_path = "FreeMono-Regular-8975.ttf"
 file_path="Armenian.unicharset.txt"
 
@@ -21,23 +21,35 @@ def create_blank(width, height, rgb_color=(0, 0, 0)):
 def pass_to_the_tesseract():
     pass
 
+def parse_args():
+    parser = argparse.ArgumentParser(description='Get image width and height.')
+    parser.add_argument('--w', default=100, help='width of created image (default: find the 100)')
+    parser.add_argument('--h', default=100, help='height of created image (default: find the 100)')
+
+    args = parser.parse_args()
+    return args.w, args.h
+
 if __name__ == '__main__':
-    symbol_size = 20
-    width, height = 50, 50
+    args = parse_args()
+    width = int(args[0])
+    height = int(args[1])
+    symbol_size = int(width/2)
     white = (255, 255, 255)
     b, g, r, a = 0, 0, 0, 0
     symbols = get_symbol_list(file_path)
     # Iterate over the string
-    withe_image = numpy.ones((100, 100, 1), numpy.uint8) * 255
-    cv.imwrite("test.jpg", withe_image)
+    out_folder_path = 'input_png' + '_' + str(width) + '_' + str(height) + '/'
+    if not os.path.exists(out_folder_path):
+        os.mkdir(out_folder_path)
     for i, v in enumerate(str(symbols)):
         v.replace('\n', '')
-        os.mkdir(out_folder_path + v)
+        if not os.path.exists(out_folder_path + v):
+            os.mkdir(out_folder_path + v)
         img = create_blank(width, height, rgb_color=white)
         font = ImageFont.truetype(font_path, symbol_size)
         img_pil = Image.fromarray(img)
         draw = ImageDraw.Draw(img_pil)
-        draw.text((20, 8), v, font=font, fill=(b, g, r, a))
+        draw.text((((width - symbol_size)/2, (height-symbol_size)/2)), v, font=font, fill=(b, g, r, a))
         img = numpy.array(img_pil)
         cv.imwrite(out_folder_path + v + '/'+ v +".png", img)
         file = open(out_folder_path + v + '/' + v + ".txt", "w")
