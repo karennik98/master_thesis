@@ -1,0 +1,26 @@
+karen@karen:~/rau/master_thesis/output_png_50_50/U$ export TESSDATA_PREFIX="C
+karen@karen:~/rau/master_thesis/output_png_50_50/U$ AC
+karen@karen:~/rau/master_thesis/output_png_50_50/U$ AC
+karen@karen:~/rau/master_thesis/output_png_50_50/U$ pwd
+
+/home /karen/rau/master_thesis/output_png_50_50/W
+
+karen@karen:~/rau/master_thesis/output_png_50_50/US export TESSDATA_PREFIX=/home/karen/rau/master_thesis
+karen@karen:~/rau/master_thesis/output_png_50_50/US tesseract Wpng output --oem 1 -1 eng
+
+Tesseract Open Source OCR Engine v5.0.0-alpha-20210401-130-97a308 with Leptonica
+
+Estimating resolution as 150
+
+Empty page
+Estimating resolution as 150
+Empty page
+
+ 
+
+ 
+
+ 
+
+ 
+

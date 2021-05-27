@@ -3,6 +3,7 @@ import os
 import numpy
 from PIL import ImageFont, ImageDraw, Image
 import argparse
+import subprocess
 
 font_path = "FreeMono-Regular-8975.ttf"
 file_path="Armenian.unicharset.txt"
@@ -18,8 +19,15 @@ def create_blank(width, height, rgb_color=(0, 0, 0)):
     image[:] = color
     return image
 
-def pass_to_the_tesseract():
-    pass
+def pass_to_the_tesseract(all_path):
+    os.environ["TESSDATA_PREFIX"] = "./"
+    output=str()
+    for path_pair in all_path:
+        # tesseract Ա.png output --oem 1 --psm 10 -l hye
+        bash_cmd = ["tesseract", path_pair[0], output, "--oem", "1", "--psm", "10", "-l", "hye"]
+        process = subprocess.Popen(bash_cmd, stdout=subprocess.PIPE)
+        # output, error = process.communicate()
+        print(output)
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Get image width and height.')
@@ -41,6 +49,7 @@ if __name__ == '__main__':
     out_folder_path = 'input_png' + '_' + str(width) + '_' + str(height) + '/'
     if not os.path.exists(out_folder_path):
         os.mkdir(out_folder_path)
+    all_path = list()
     for i, v in enumerate(str(symbols)):
         v.replace('\n', '')
         if not os.path.exists(out_folder_path + v):
@@ -51,9 +60,12 @@ if __name__ == '__main__':
         draw = ImageDraw.Draw(img_pil)
         draw.text((((width - symbol_size)/2, (height-symbol_size)/2)), v, font=font, fill=(b, g, r, a))
         img = numpy.array(img_pil)
-        cv.imwrite(out_folder_path + v + '/'+ v +".png", img)
-        file = open(out_folder_path + v + '/' + v + ".txt", "w")
+        image = out_folder_path + v + '/'+ v +".png"
+        text = out_folder_path + v + '/' + v + ".txt"
+        cv.imwrite(image, img)
+        file = open(text, "w")
+        all_path.append((image, text))
         file.write(v)
         file.close()
 
-    pass_to_the_tesseract()
+    pass_to_the_tesseract(all_path)
