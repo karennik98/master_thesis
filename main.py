@@ -1,5 +1,6 @@
 import cv2 as cv
 import os
+import sys
 import numpy
 from PIL import ImageFont, ImageDraw, Image
 import argparse
@@ -20,14 +21,37 @@ def create_blank(width, height, rgb_color=(0, 0, 0)):
     return image
 
 def pass_to_the_tesseract(all_path):
+    outfile = open("outfile.txt", "w")
     os.environ["TESSDATA_PREFIX"] = "./"
-    output=str()
+    same_list = list()
+    diff_list = list()
     for path_pair in all_path:
-        # tesseract Ա.png output --oem 1 --psm 10 -l hye
-        bash_cmd = ["tesseract", path_pair[0], output, "--oem", "1", "--psm", "10", "-l", "hye"]
-        process = subprocess.Popen(bash_cmd, stdout=subprocess.PIPE)
-        # output, error = process.communicate()
-        print(output)
+        os.system("tesseract " + path_pair[0] + " out --oem 1 --psm 10 -l hye")
+        with open("out.txt", "r") as out:
+            rec_symbol = out.readline()
+            rec_symbol = rec_symbol.replace('\n', '')
+            with open(path_pair[1], "r") as orig_text:
+                orig_symbol = orig_text.readline()
+                if orig_symbol == rec_symbol:
+                    outfile.write("Rec symbol: " + rec_symbol + "\n")
+                    outfile.write("Orig symbol: " + orig_symbol + "\n")
+                    outfile.write("Res: same\n\n")
+                    same_list.append((rec_symbol, orig_symbol))
+                else:
+                    outfile.write("Rec symbol: " + rec_symbol + "\n")
+                    outfile.write("Orig symbol: " + orig_symbol + "\n")
+                    outfile.write("Res: diff\n\n")
+                    diff_list.append((rec_symbol, orig_symbol))
+    outfile.write("All same symbols count: " + str(len(same_list)) + '\n')
+    for el in same_list:
+        outfile.write(str(el))
+    outfile.write('\n\n')
+    outfile.write("All diff symbols count: " + str(len(diff_list)) + '\n')
+    for el in diff_list:
+        outfile.write(str(el))
+    outfile.write('\n')
+    outfile.close()
+    return same_list, diff_list
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Get image width and height.')
@@ -68,4 +92,6 @@ if __name__ == '__main__':
         file.write(v)
         file.close()
 
-    pass_to_the_tesseract(all_path)
+    same, diff = pass_to_the_tesseract(all_path)
+    print(same)
+    print(diff)
