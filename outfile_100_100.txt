@@ -1,0 +1,309 @@
+Rec symbol: Կ
+Orig symbol: Ա
+Res: diff
+
+Rec symbol: ա
+Orig symbol: ա
+Res: same
+
+Rec symbol: Բ
+Orig symbol: Բ
+Res: same
+
+Rec symbol: բ
+Orig symbol: բ
+Res: same
+
+Rec symbol: Գ
+Orig symbol: Գ
+Res: same
+
+Rec symbol: Գ
+Orig symbol: գ
+Res: diff
+
+Rec symbol: Դ
+Orig symbol: Դ
+Res: same
+
+Rec symbol: դ
+Orig symbol: դ
+Res: same
+
+Rec symbol: Ե
+Orig symbol: Ե
+Res: same
+
+Rec symbol: ե
+Orig symbol: ե
+Res: same
+
+Rec symbol: Զ
+Orig symbol: Զ
+Res: same
+
+Rec symbol: Ձ
+Orig symbol: զ
+Res: diff
+
+Rec symbol: Է
+Orig symbol: Է
+Res: same
+
+Rec symbol: է
+Orig symbol: է
+Res: same
+
+Rec symbol: Ը
+Orig symbol: Ը
+Res: same
+
+Rec symbol: ը
+Orig symbol: ը
+Res: same
+
+Rec symbol: Թ
+Orig symbol: Թ
+Res: same
+
+Rec symbol: թ
+Orig symbol: թ
+Res: same
+
+Rec symbol: Ժ
+Orig symbol: Ժ
+Res: same
+
+Rec symbol: Ժ
+Orig symbol: ժ
+Res: diff
+
+Rec symbol: Ի
+Orig symbol: Ի
+Res: same
+
+Rec symbol: ի
+Orig symbol: ի
+Res: same
+
+Rec symbol: Լ
+Orig symbol: Լ
+Res: same
+
+Rec symbol: Լ
+Orig symbol: լ
+Res: diff
+
+Rec symbol: Խ
+Orig symbol: Խ
+Res: same
+
+Rec symbol: խ
+Orig symbol: խ
+Res: same
+
+Rec symbol: Օօ
+Orig symbol: Ծ
+Res: diff
+
+Rec symbol: ծ
+Orig symbol: ծ
+Res: same
+
+Rec symbol: Կ
+Orig symbol: Կ
+Res: same
+
+Rec symbol: Կ
+Orig symbol: կ
+Res: diff
+
+Rec symbol: Հ
+Orig symbol: Հ
+Res: same
+
+Rec symbol: հ
+Orig symbol: հ
+Res: same
+
+Rec symbol: Ձ
+Orig symbol: Ձ
+Res: same
+
+Rec symbol: Շ
+Orig symbol: ձ
+Res: diff
+
+Rec symbol: Ղ
+Orig symbol: Ղ
+Res: same
+
+Rec symbol: ղ
+Orig symbol: ղ
+Res: same
+
+Rec symbol: ո
+Orig symbol: Ճ
+Res: diff
+
+Rec symbol: ն
+Orig symbol: ճ
+Res: diff
+
+Rec symbol: Մ
+Orig symbol: Մ
+Res: same
+
+Rec symbol: ս
+Orig symbol: մ
+Res: diff
+
+Rec symbol: 3
+Orig symbol: Յ
+Res: diff
+
+Rec symbol: յ
+Orig symbol: յ
+Res: same
+
+Rec symbol: Ն
+Orig symbol: Ն
+Res: same
+
+Rec symbol: ն
+Orig symbol: ն
+Res: same
+
+Rec symbol: օ
+Orig symbol: Շ
+Res: diff
+
+Rec symbol: Զ
+Orig symbol: շ
+Res: diff
+
+Rec symbol: ո
+Orig symbol: Ո
+Res: diff
+
+Rec symbol: ոռ
+Orig symbol: ո
+Res: diff
+
+Rec symbol: Չ
+Orig symbol: Չ
+Res: same
+
+Rec symbol: 2.
+Orig symbol: չ
+Res: diff
+
+Rec symbol: Պ
+Orig symbol: Պ
+Res: same
+
+Rec symbol: պ
+Orig symbol: պ
+Res: same
+
+Rec symbol: Ջ
+Orig symbol: Ջ
+Res: same
+
+Rec symbol: Ջ
+Orig symbol: ջ
+Res: diff
+
+Rec symbol: դ
+Orig symbol: Ռ
+Res: diff
+
+Rec symbol: ռ
+Orig symbol: ռ
+Res: same
+
+Rec symbol: Ս
+Orig symbol: Ս
+Res: same
+
+Rec symbol: Աս
+Orig symbol: ս
+Res: diff
+
+Rec symbol: Վ
+Orig symbol: Վ
+Res: same
+
+Rec symbol: վ
+Orig symbol: վ
+Res: same
+
+Rec symbol: Տ
+Orig symbol: Տ
+Res: same
+
+Rec symbol: Տ
+Orig symbol: տ
+Res: diff
+
+Rec symbol: Ը
+Orig symbol: Ր
+Res: diff
+
+Rec symbol: ը
+Orig symbol: ր
+Res: diff
+
+Rec symbol: Ց
+Orig symbol: Ց
+Res: same
+
+Rec symbol: 9
+Orig symbol: ց
+Res: diff
+
+Rec symbol: է
+Orig symbol: Ւ
+Res: diff
+
+Rec symbol: 1
+Orig symbol: ւ
+Res: diff
+
+Rec symbol: Փ
+Orig symbol: Փ
+Res: same
+
+Rec symbol: փ
+Orig symbol: փ
+Res: same
+
+Rec symbol: Ք
+Orig symbol: Ք
+Res: same
+
+Rec symbol: Է
+Orig symbol: ք
+Res: diff
+
+Rec symbol: Օ
+Orig symbol: Օ
+Res: same
+
+Rec symbol: Փ,
+Orig symbol: օ
+Res: diff
+
+Rec symbol: Ֆ
+Orig symbol: Ֆ
+Res: same
+
+Rec symbol: Ֆ
+Orig symbol: ֆ
+Res: diff
+
+All same symbols count: 47
+('ա', 'ա')('Բ', 'Բ')('բ', 'բ')('Գ', 'Գ')('Դ', 'Դ')('դ', 'դ')('Ե', 'Ե')('ե', 'ե')('Զ', 'Զ')('Է', 'Է')('է', 'է')('Ը', 'Ը')('ը', 'ը')('Թ', 'Թ')('թ', 'թ')('Ժ', 'Ժ')('Ի', 'Ի')('ի', 'ի')('Լ', 'Լ')('Խ', 'Խ')('խ', 'խ')('ծ', 'ծ')('Կ', 'Կ')('Հ', 'Հ')('հ', 'հ')('Ձ', 'Ձ')('Ղ', 'Ղ')('ղ', 'ղ')('Մ', 'Մ')('յ', 'յ')('Ն', 'Ն')('ն', 'ն')('Չ', 'Չ')('Պ', 'Պ')('պ', 'պ')('Ջ', 'Ջ')('ռ', 'ռ')('Ս', 'Ս')('Վ', 'Վ')('վ', 'վ')('Տ', 'Տ')('Ց', 'Ց')('Փ', 'Փ')('փ', 'փ')('Ք', 'Ք')('Օ', 'Օ')('Ֆ', 'Ֆ')
+
+All diff symbols count: 29
+('Կ', 'Ա')('Գ', 'գ')('Ձ', 'զ')('Ժ', 'ժ')('Լ', 'լ')('Օօ', 'Ծ')('Կ', 'կ')('Շ', 'ձ')('ո', 'Ճ')('ն', 'ճ')('ս', 'մ')('3', 'Յ')('օ', 'Շ')('Զ', 'շ')('ո', 'Ո')('ոռ', 'ո')('2.', 'չ')('Ջ', 'ջ')('դ', 'Ռ')('Աս', 'ս')('Տ', 'տ')('Ը', 'Ր')('ը', 'ր')('9', 'ց')('է', 'Ւ')('1', 'ւ')('Է', 'ք')('Փ,', 'օ')('Ֆ', 'ֆ')

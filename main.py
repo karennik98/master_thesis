@@ -20,8 +20,8 @@ def create_blank(width, height, rgb_color=(0, 0, 0)):
     image[:] = color
     return image
 
-def pass_to_the_tesseract(all_path):
-    outfile = open("outfile.txt", "w")
+def pass_to_the_tesseract(width, height, all_path):
+    outfile = open("outfile_" + str(width) + "_" + str(height) + ".txt", "w")
     os.environ["TESSDATA_PREFIX"] = "./"
     same_list = list()
     diff_list = list()
@@ -86,12 +86,12 @@ if __name__ == '__main__':
         img = numpy.array(img_pil)
         image = out_folder_path + v + '/'+ v +".png"
         text = out_folder_path + v + '/' + v + ".txt"
-        cv.imwrite(image, img)
+        cv.imwrite(image, img, [int(cv.IMWRITE_JPEG_QUALITY), 95])
         file = open(text, "w")
         all_path.append((image, text))
         file.write(v)
         file.close()
 
-    same, diff = pass_to_the_tesseract(all_path)
+    same, diff = pass_to_the_tesseract(width, height, all_path)
     print(same)
     print(diff)
